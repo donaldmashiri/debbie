@@ -22,6 +22,7 @@
                             <img class="img-fluid" src="assets/images/widget/user-1.png" alt="user-header">
                             <h5>Debbie</h5>
                             <h6>Teacher</h6>
+                            <h5>debbie@gmail.com</h5>
                         </div>
                     </div>
                 </div>
