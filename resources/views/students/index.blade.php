@@ -9,7 +9,7 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="main-header">
-                    <h4>Records the grade attained by each student </h4>
+                    <h4>Students</h4>
                 </div>
             </div>
             <!-- 4-blocks row start -->
@@ -19,34 +19,35 @@
                 <div class="col-xl-8 col-lg-12">
                     <div class="card">
                         <div class="card-block">
+                            @if($students->count() > 0)
                             <div class="table-responsive">
                                 <table class="table m-b-0 photo-table">
                                     <thead>
                                     <tr class="text-uppercase">
                                         <th>Student Number</th>
-                                        <th>Student Name</th>
-                                        <th>Grade</th>
-                                        <th>Semester</th>
-                                        <th>Status</th>
+                                        <th>Full Names</th>
+                                        <th>Program</th>
+                                        <th>Level</th>
                                         <th>Date</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
-                                        <td>R1789273H</td>
-                                        <td>Sarah Tencredi</td>
-                                        <td>85</td>
-                                        <td>2</td>
-                                        <td>
-                                            <span class="pie" style="display: none;">226,134</span><svg class="peity" height="30" width="30"><path d="M 15.000000000000002 0 A 15 15 0 1 1 4.209902994920235 25.41987555688496 L 15 15" fill="#2196F3"></path><path d="M 4.209902994920235 25.41987555688496 A 15 15 0 0 1 14.999999999999996 0 L 15 15" fill="#ccc"></path></svg>
-                                        </td>
-                                        <td>October 21, 2015</td>
+                                    @foreach($students as $student)
+                                        <td>{{$student->id}}</td>
+                                        <td>{{$student->full_names}}</td>
+                                        <td>{{$student->program}}</td>
+                                        <td>{{$student->level}}</td>
+                                        <td>{{$student->created_at}}</td>
+                                    @endforeach
                                     </tr>
 
                                     </tbody>
                                 </table>
-
                             </div>
+                            @else
+                                <h3 class='text-center alert alert-danger'>No Students Added</h3>
+                            @endif
                         </div>
                     </div>
                 </div>

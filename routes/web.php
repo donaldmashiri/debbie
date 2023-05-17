@@ -17,6 +17,7 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::resource('students', \App\Http\Controllers\StudentController::class);
 Route::resource('grades', \App\Http\Controllers\GradeController::class);
 Route::resource('passrates', \App\Http\Controllers\PassRateController::class);
 Route::resource('ratetrends', \App\Http\Controllers\RateTrendsController::class);

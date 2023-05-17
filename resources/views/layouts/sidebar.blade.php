@@ -10,11 +10,10 @@
             </li>
 
             <li class="treeview">
-                <a class="waves-effect waves-dark" href="{{ route('home') }}">
-                    <i class="icon-list"></i><span> Profile</span>
+                <a class="waves-effect waves-dark" href="{{ route('students.index') }}">
+                    <i class="icon-book"></i><span> Students</span>
                 </a>
             </li>
-
 
             <li class="treeview">
                 <a class="waves-effect waves-dark" href="{{ route('grades.index') }}">

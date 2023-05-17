@@ -49,7 +49,7 @@
 <div class="wrapper">
     <!-- Navbar-->
     <header class="main-header-top hidden-print">
-        <a href="index.html" class="logo"><img class="img-fluid able-logo" src="img/logo2.png" alt="Theme-logo"></a>
+        <a href="index.html" class="logo"><img class="img-fluid able-logo" src="{{ asset('img/logo2.png') }}" alt="Theme-logo"></a>
         <nav class="navbar navbar-static-top">
             <!-- Sidebar toggle button-->
             <a href="#!" data-toggle="offcanvas" class="sidebar-toggle"></a>
@@ -74,8 +74,8 @@
                     <!-- User Menu-->
                     <li class="dropdown">
                         <a href="#!" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle drop icon-circle drop-image">
-                            <span><img class="img-circle " src="assets/images/avatar-1.png" style="width:40px;" alt="User Image"></span>
-                            <span>John <b>Doe</b> <i class=" icofont icofont-simple-down"></i></span>
+                            <span><img class="img-circle " src="{{ asset('img/logo2.png') }}" style="width:40px;" alt="User Image"></span>
+                            <span>Debbie <i class=" icofont icofont-simple-down"></i></span>
 
                         </a>
                         <ul class="dropdown-menu settings-menu">
