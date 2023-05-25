@@ -18,37 +18,32 @@
             <div class="row">
                 <div class="col-xl-8 col-lg-12">
                     <div class="card">
-                        <div class="card-block">
-                            @if($students->count() > 0)
-                            <div class="table-responsive">
-                                <table class="table m-b-0 photo-table">
-                                    <thead>
-                                    <tr class="text-uppercase">
-                                        <th>Student Number</th>
-                                        <th>Full Names</th>
-                                        <th>Program</th>
-                                        <th>Level</th>
-                                        <th>Date</th>
-                                    </tr>
-                                    </thead>
-                                    <tbody>
+                        <div class="card-header"></div>
+                        <div class="card-body">
+                            <table class="table table-bordered table-sm">
+                                <thead>
+                                <tr>
+                                    <th scope="col">Student Number</th>
+                                    <th scope="col">Full Names</th>
+                                    <th scope="col">Program</th>
+                                    <th scope="col">Level</th>
+                                    <th scope="col">Date</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                @foreach($students as $student)
                                     <tr>
-                                    @foreach($students as $student)
-                                        <td>{{$student->id}}</td>
+                                        <td>SD00{{$student->id}}</td>
                                         <td>{{$student->full_names}}</td>
                                         <td>{{$student->program}}</td>
                                         <td>{{$student->level}}</td>
                                         <td>{{$student->created_at}}</td>
-                                    @endforeach
                                     </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
-                            @else
-                                <h3 class='text-center alert alert-danger'>No Students Added</h3>
-                            @endif
+                                @endforeach
+                                </tbody>
+                            </table>
                         </div>
+
                     </div>
                 </div>
 

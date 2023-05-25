@@ -52,14 +52,14 @@ function dashboard(){
 
   Highcharts.chart('barchart', {
       title: {
-          text: 'Combination chart'
+          text: 'Pass Rate'
       },
       xAxis: {
-          categories: ['Apples', 'Oranges', 'Pears', 'Bananas', 'Plums']
+          categories: ['Semester 1', 'Semester 2', 'Semester 2', 'Semester 3', 'Semester 4']
       },
       labels: {
           items: [{
-              html: 'Total fruit consumption',
+              html: 'Total Pass Rate',
               style: {
                   left: '130px',
                   top: '18px',

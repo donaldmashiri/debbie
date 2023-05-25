@@ -19,7 +19,7 @@ class Userseeder extends Seeder
         if(!$user){
             User::create([
                 'role' => 'admin',
-                'name' => 'Donnie Angel',
+                'name' => 'Debbie',
                 'email' => 'admin@admin.com',
                 'password' => Hash::make('password')
             ]);

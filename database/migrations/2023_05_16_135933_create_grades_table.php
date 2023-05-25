@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('grades', function (Blueprint $table) {
             $table->id();
+            $table->string('student_id');
+            $table->string('semester_id');
             $table->string('mark');
             $table->string('percentage');
             $table->string('symbol');
-            $table->string('grade_id');
             $table->timestamps();
         });
     }

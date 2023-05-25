@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Semester;
+use App\Models\Student;
 use Illuminate\Http\Request;
 
 class GradeController extends Controller
@@ -11,7 +13,9 @@ class GradeController extends Controller
      */
     public function index()
     {
-        return view('grades.index');
+        return view('grades.index')
+            ->with('students', Student::all())
+            ->with('semesters', Semester::all());
     }
 
     /**

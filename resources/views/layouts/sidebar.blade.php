@@ -2,7 +2,9 @@
     <section class="sidebar" id="sidebar-scroll">
         <!-- Sidebar Menu-->
         <ul class="sidebar-menu">
-            <li class="nav-level">--- Navigation</li>
+            <li class="nav-level text-center">
+                <h4>{{ Auth::user()->name }}</h4>
+            </li>
             <li class="active treeview">
                 <a class="waves-effect waves-dark" href="{{ route('home') }}">
                     <i class="icon-speedometer"></i><span> Dashboard</span>
@@ -10,10 +12,17 @@
             </li>
 
             <li class="treeview">
-                <a class="waves-effect waves-dark" href="{{ route('students.index') }}">
-                    <i class="icon-book"></i><span> Students</span>
+                <a class="waves-effect waves-dark" href="profile">
+                    <i class="icon-user"></i><span> Profile</span>
                 </a>
             </li>
+
+            <li class="treeview">
+                <a class="waves-effect waves-dark" href="{{ route('students.index') }}">
+                    <i class="icon-settings"></i><span> Students</span>
+                </a>
+            </li>
+
 
             <li class="treeview">
                 <a class="waves-effect waves-dark" href="{{ route('grades.index') }}">

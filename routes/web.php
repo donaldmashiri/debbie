@@ -26,3 +26,4 @@ Route::resource('ratetrends', \App\Http\Controllers\RateTrendsController::class)
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/profile', [App\Http\Controllers\HomeController::class, 'profile'])->name('profile');
