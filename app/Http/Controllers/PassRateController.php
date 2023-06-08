@@ -27,7 +27,33 @@ class PassRateController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'class_id' => 'required|exists:classes,id',
+            'semesters' => 'required|array',
+            'semesters.*' => 'required',
+        ]);
+
+        $classId = $request->input('class_id');
+        $semesters = $request->input('semesters');
+
+        $passRates = [];
+        $previousPassRate = null;
+
+        foreach ($semesters as $semester) {
+            $passRate = Grade::where('class_id', $classId)
+                ->where('semester', $semester)
+                ->where('grade', '>=', 50)
+                ->avg('grade');
+
+            if ($previousPassRate !== null) {
+                $percentageChange = ($passRate - $previousPassRate) / $previousPassRate * 100;
+                $passRates[$semester] = $percentageChange;
+            }
+
+            $previousPassRate = $passRate;
+        }
+
+        return response()->json(['status' => 'success', 'pass_rates' => $passRates]);
     }
 
     /**

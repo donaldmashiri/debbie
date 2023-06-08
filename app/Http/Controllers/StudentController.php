@@ -13,7 +13,7 @@ class StudentController extends Controller
     public function index()
     {
         return view('students.index')
-            ->with('students', Student::all());
+            ->with('students', Student::orderBy('created_at', 'desc')->get());
     }
 
     /**
@@ -21,7 +21,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return view('students.create');
     }
 
     /**

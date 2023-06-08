@@ -18,7 +18,11 @@
             <div class="row">
                 <div class="col-xl-8 col-lg-12">
                     <div class="card">
-                        <div class="card-header"></div>
+                        <div
+                            class="card-header bg-success  py-3 d-flex flex-row align-items-center justify-content-between">
+                            <a href="{{ route('students.create') }}" class="btn btn-secondary justify-content-end">Add New Student</a>
+                        </div>
+                        @include('partials.errors')
                         <div class="card-body">
                             <table class="table table-bordered table-sm">
                                 <thead>

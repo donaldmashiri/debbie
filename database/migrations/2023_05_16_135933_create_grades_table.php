@@ -15,9 +15,9 @@ return new class extends Migration
             $table->id();
             $table->string('student_id');
             $table->string('semester_id');
-            $table->string('mark');
-            $table->string('percentage');
-            $table->string('symbol');
+            $table->string('mark_name');
+//            $table->string('percentage')->nullable();
+//            $table->string('symbol')->nullable();
             $table->timestamps();
         });
     }

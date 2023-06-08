@@ -10,6 +10,7 @@
                     <img src="{{ asset('img/logo1.jpeg') }}" alt="logo">
                 </div>
                 <div class="card-body">
+
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
