@@ -42,6 +42,18 @@
                 </a>
             </li>
 
+            <li class="treeview">
+                <a class="waves-effect waves-dark" href="/chat">
+                    <i class="icon-trophy"></i><span>Chat</span>
+                </a>
+            </li>
+
+            <li class="treeview">
+                <a class="waves-effect waves-dark" href="/line">
+                    <i class="icon-trophy"></i><span>Line</span>
+                </a>
+            </li>
+
         </ul>
 
     </section>

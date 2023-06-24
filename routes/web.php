@@ -17,6 +17,14 @@ Route::get('/', function () {
     return view('auth.login');
 });
 
+Route::get('/chat', function () {
+    return view('chat');
+});
+
+Route::get('/line', function () {
+    return view('line');
+});
+
 Route::resource('students', \App\Http\Controllers\StudentController::class);
 Route::resource('grades', \App\Http\Controllers\GradeController::class);
 Route::resource('passrates', \App\Http\Controllers\PassRateController::class);
